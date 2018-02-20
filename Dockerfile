@@ -24,3 +24,5 @@ RUN if [ ! -d .ssh ]; then mkdir .ssh; fi \
 
 RUN git clone https://github.com/nukosuke/dotfiles ~/dotfiles \
  && mv ~/dotfiles/.emacs.d ~/
+
+ENTRYPOINT ["emacs"]
