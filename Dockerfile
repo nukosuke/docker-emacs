@@ -22,4 +22,5 @@ RUN if [ ! -d .ssh ]; then mkdir .ssh; fi \
  && chmod 700 .ssh \
  && ssh-keyscan -H github.com >> .ssh/knownhosts
 
-RUN git clone https://github.com/syl20bnr/spacemacs ~/.emacs.d
+RUN git clone https://github.com/nukosuke/dotfiles ~/dotfiles \
+ && mv ~/dotfiles/.emacs.d ~/
